@@ -1,10 +1,10 @@
 # Modernizing Legacy PHP Apps
 
 ## Incremental approach
-Pay off smallest debt
-Small changes across the codebase
-Build on previous small changes
-Improve quality over time
+- Pay off smallest debt
+- Small changes across the codebase
+- Build on previous small changes
+- Improve quality over time
 
 ### Incremental goals
 Keep the application running
