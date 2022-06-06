@@ -7,14 +7,14 @@
 - Improve quality over time
 
 ### Incremental goals
-Keep the application running
-Consolidate classes for autoloading (PSR-0)
-Incidentally, also functions
-That way we can remove all the includes and requires everywhere
-Convert globals to injected dependencies
-After each change (one small change), “spot check”, commit, push, QA
-“Spot check” tests the output of the system. Probably not a unit test, because most likely you don’t have them.
-ie, get the output of the page, make the change, get the output of the page. If it’s the same, good.
+- Keep the application running
+- Consolidate classes for autoloading (PSR-0)
+  - Incidentally, also functions
+  - That way we can remove all the includes and requires everywhere
+- Convert globals to injected dependencies
+- After each change (one small change), “spot check”, commit, push, QA
+  - “Spot check” tests the output of the system. Probably not a unit test, because most likely you don’t have them.
+    - ie, get the output of the page, make the change, get the output of the page. If it’s the same, good.
 
 ### Autoloading
 PSR-0 autoloading
