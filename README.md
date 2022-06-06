@@ -1,11 +1,12 @@
 # Modernizing Legacy PHP Apps
 
-Incremental approach
+## Incremental approach
 Pay off smallest debt
 Small changes across the codebase
 Build on previous small changes
 Improve quality over time
-Incremental goals
+
+### Incremental goals
 Keep the application running
 Consolidate classes for autoloading (PSR-0)
 Incidentally, also functions
@@ -14,7 +15,8 @@ Convert globals to injected dependencies
 After each change (one small change), “spot check”, commit, push, QA
 “Spot check” tests the output of the system. Probably not a unit test, because most likely you don’t have them.
 ie, get the output of the page, make the change, get the output of the page. If it’s the same, good.
-Autoloading
+
+### Autoloading
 PSR-0 autoloading
 Class name maps directly to file name
 Namespace separators map directly to directory separators
@@ -43,14 +45,16 @@ Problem: some dependencies have dependencies
 Ask yourself if the calling class needs the global you need to pass in? It may not.
 So, pass in the dependent class as a dependency injection to the class constructor
 So you end up creating the $db, injecting it into the class that needs it, then inject that class into the other class
-Initial goals completed
+
+### Initial goals completed
 Consolidated into classes with PSR-0 and autoloading
 Removed globals in favor of dependency injection 
 Kept it running the whole time
 Paid off some technical debt
 Set up an organizational structure for future work
 We can start writing unit tests
-But wait! There’s more!
+
+### But wait! There’s more!
 Using new keyword (remove it everywhere from the code)
 Separation of concerns:
 Object creation (factories to create classes)
