@@ -49,31 +49,31 @@
     - So you end up creating the $db, injecting it into the class that needs it, then inject that class into the other class
 
 ### Initial goals completed
-Consolidated into classes with PSR-0 and autoloading
-Removed globals in favor of dependency injection 
-Kept it running the whole time
-Paid off some technical debt
-Set up an organizational structure for future work
-We can start writing unit tests
+- Consolidated into classes with PSR-0 and autoloading
+- Removed globals in favor of dependency injection 
+- Kept it running the whole time
+- Paid off some technical debt
+- Set up an organizational structure for future work
+- We can start writing unit tests
 
 ### But wait! There’s more!
-Using new keyword (remove it everywhere from the code)
-Separation of concerns:
-Object creation (factories to create classes)
-Object use (created classes perform their logic)
-Embedded SQL statements
-Consolidate it into gateway classes
-Then our SQL code is independently testable
-We can even swap it out with a DBAL
-Embedded domain logic
-Consolidate it into transaction scripts
-Also independently testable, even from the SQL
-Embedded presentation logic
-All the response work, presentation, headers, etc
-Embedded action logic
-Put this into either controller or action classes
-Embedded include calls
-Put the few of these that are left into their own classes and methods
-Router + front controller
-These can then point to our new controllers to de-couple the page scripts
-DI container
+- Using new keyword (remove it everywhere from the code)
+  - Separation of concerns:
+    - Object creation (factories to create classes)
+    - Object use (created classes perform their logic)
+- Embedded SQL statements
+  - Consolidate it into gateway classes
+  - Then our SQL code is independently testable
+  - We can even swap it out with a DBAL
+- Embedded domain logic
+  - Consolidate it into transaction scripts
+  - Also independently testable, even from the SQL
+- Embedded presentation logic
+  - All the response work, presentation, headers, etc
+- Embedded action logic
+  - Put this into either controller or action classes
+- Embedded include calls
+  - Put the few of these that are left into their own classes and methods
+- Router + front controller
+  - These can then point to our new controllers to de-couple the page scripts
+- DI container
